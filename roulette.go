@@ -77,6 +77,11 @@ func main() {
 		}
 	}
 
+	if len(roulette) == 0 {
+		fmt.Println("The roulette is empty. Pulling the trigger is useless.")
+		return
+	}
+
 	slices.Sort(roulette)
 	choosenUser := roulette[rand.Intn(len(roulette))]
 
